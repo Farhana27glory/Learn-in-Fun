@@ -1,0 +1,616 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>খেলতে খেলতে শিখি</title>
+<style type="text/css">
+body
+{
+	background-image:url(add_carry_img/bg3.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.panel
+{
+
+	height:550px;
+	width:190px;
+	background-color:#D9FF9F;
+	float:left;
+	padding-top:10px;
+	padding-left:10px;
+	-moz-border-radius:15px;  /* for Firefox */
+	-webkit-border-radius:15px; /* for Webkit-Browsers */
+	border-radius:15px; /* regular */
+/*	opacity:0.7;*/
+	
+}
+.panelcont{
+
+	background-image:url(add_carry_img/panel_bg.png);	
+	height:60px;
+	width:150px;
+	font-size:25px;
+	color:#C9F;
+	padding:10px;
+	margin-left:5px;
+	margin-bottom:10px;
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;
+	-moz-border-radius:10px;  /* for Firefox */
+	-webkit-border-radius:10px; /* for Webkit-Browsers */
+	border-radius:10px; /* regular */
+}
+#button
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	height:40px;
+	width:40px;
+	float:left;
+	background-image:url(add_carry_img/lemon-green.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:2px;
+}
+#digit1
+{
+	font-size:24px;
+	font:SutonnyMJ;
+	font-family:SutonnyMJ;
+	color:#000;
+	float:left;
+	position:relative;
+	top:0px;
+	left:0px;
+	margin-left:10px;
+	margin-top:5px;
+}
+#digit2
+{
+	font-size:24px;
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;
+	color:#000;
+	float:left;
+	position:relative;
+	top:0px;
+	left:0px;
+	margin-left:5px;
+	margin-top:5px;
+}
+
+#display
+{
+	font-size:45px;
+	height:50px;
+	width:300px;
+	margin-left:20px;
+	padding-left:55px;
+	color:#378101;
+	background-color:#FCFEA0;
+	border:1;
+	border-color:#D30A18;
+	border-style:double;
+	border-width:5px;
+	-moz-border-radius:10px;  /* for Firefox */
+	-webkit-border-radius:10px; /* for Webkit-Browsers */
+	border-radius:10px; /* regular */
+	opacity:0;
+}
+
+#ip1
+{
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;
+	font-size:45px;
+	height:50px;
+	width:180px;
+	color:#378101;
+}
+#ip2
+{
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;
+	font-size:45px;
+	height:50px;
+	width:180px;
+	color:#378101;
+}
+#stack1
+{
+	top:80px;
+	left:20px;
+	float:left;
+	height:540px;
+	width:180px;
+	margin-right:10px;
+	opacity:0;
+	
+}
+
+#stack2
+{
+	top:80px;
+	left:220px;
+	float:left;
+	height:540px;
+	width:180px;
+	opacity:0;
+}
+
+#container
+{
+	background-image:url(add_carry_img/cont_bg.png);
+	border:1;
+	border-style:solid;
+	border-color:#006;
+	border-width:1px;
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+	height:135px;
+	width:180px;
+	margin-bottom:5px;
+	visibility:hidden;
+	padding:2px;
+}
+#flower
+{
+	float:left;
+	overflow:auto;
+	height:45px;
+	width:45px;
+	visibility:hidden;
+}
+
+#field
+{
+	background:url(add_carry_img/field_bg.png);
+	height:647px;
+	width:780px;
+	float:left;
+	position:absolute;
+	top: 30px;
+	left:460px;
+	border:1;
+	border-width:10px;
+	border-style:groove;
+	border-color:#378101;
+	
+}
+
+#again
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+	margin:20px;
+	visibility:hidden;
+}
+#menu
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+	margin:20px;
+	visibility:hidden;
+}
+#exit{
+	position:absolute;
+	top:40px;
+	left:300px;
+	height:80px;
+	width:140px;
+	
+}
+#again{
+	position:absolute;
+	top:75px;
+	left:0px;
+	
+}
+#prompt
+{
+	position:absolute;
+	top:15px;
+	left:75px;
+	height:170px;
+	width:680px;
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;
+}
+#position
+{
+	height:30px;
+	width:180px;
+	float:left;
+	background-color:#000;
+	border:1;
+	border-color:#99041B;
+	border-style:double;
+	border-width:5px;
+	padding:10px;
+	margin-left:238px;
+	-moz-border-radius:10px;  /* for Firefox */
+	-webkit-border-radius:10px; /* for Webkit-Browsers */
+	border-radius:10px; /* regular */
+	opacity:0;
+	font-size:30px;
+	color:#F90;
+}
+
+#explain
+{
+	width:210px;
+	margin-left:220px;
+	opacity:0;
+}
+.addition
+{
+	height:40px;
+	float:left;
+	background-color:#C5EEFE;
+	border:1;
+	border-color:#039;
+	border-style:solid;
+	border-width:3px;
+	margin-top:15px;
+	padding:10px;
+	paddingLeft:15px;
+	-moz-border-radius:10px;  /* for Firefox */
+	-webkit-border-radius:10px; /* for Webkit-Browsers */
+	border-radius:10px; /* regular */
+	opacity:0;
+	font-size:36px;
+	color:#378101;
+}
+#math
+{
+	height:265px;
+	width:225px;
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;
+	font-size:45px;
+	float:left;	
+	border:1;
+	border-width:3px;
+	border-style:solid;
+	border-color:#000;
+	position:absolute;
+	top:255px;
+	left:450px;
+}
+#blank
+{
+	float:left; 
+	height:50px; 
+	width:75px;
+}
+
+#sign
+{
+	 float:left; 
+	 width:75px; 
+	 visibility:hidden;
+	 height:80px;
+}
+#bar
+{
+	 float:left;
+	 width:225px;
+	 border-top:1;
+	 border-top-width:3px;
+	 border-top-style:solid;
+	 border-top-color:#000;
+	 height:0px; 
+	 visibility:hidden;
+}
+
+
+.digit
+{
+	float:left; 
+	height:50px; 
+	width:75px;
+}
+
+#stand
+{
+	position:absolute;
+	top:30px;
+	left:50px;
+}
+#crane
+{
+	position:absolute;
+	top:300px;
+	left:54px;
+}
+
+#car
+{
+	position:absolute;
+	top:470px;
+}
+
+#carry
+{
+	position:absolute;
+	top:400px;
+	left:520px;
+}
+
+</style>
+
+</head>
+<body>
+
+	<div id="display">যোগ</div>
+	<div class="panel" id="panel1">
+   			<div class="panelcont" id="panelcont1">একটি সংখ্যা বেছে নাও</div>
+        	<div id="button" onClick="setIP1(1)"><p id="digit1">১</p></div>
+        	<div id="button" onClick="setIP1(2)"><p id="digit1">২</p></div>
+        	<div id="button" onClick="setIP1(3)"><p id="digit1">৩</p></div>
+        	<div id="button" onClick="setIP1(4)"><p id="digit1">৪</p></div>
+        	<div id="button" onClick="setIP1(5)"><p id="digit1">৫</p></div>
+        	<div id="button" onClick="setIP1(6)"><p id="digit1">৬</p></div>
+        	<div id="button" onClick="setIP1(7)"><p id="digit1">৭</p></div>
+        	<div id="button" onClick="setIP1(8)"><p id="digit1">৮</p></div>
+        	<div id="button" onClick="setIP1(9)"><p id="digit1">৯</p></div>
+        	<div id="button" onClick="setIP1(10)"><p id="digit2">১০</p></div>
+            
+            <div id="button" onClick="setIP1(11)"><p id="digit2">১১</p></div>
+            <div id="button" onClick="setIP1(12)"><p id="digit2">১২</p></div>
+            <div id="button" onClick="setIP1(13)"><p id="digit2">১৩</p></div>
+            <div id="button" onClick="setIP1(14)"><p id="digit2">১৪</p></div>
+            <div id="button" onClick="setIP1(15)"><p id="digit2">১৫</p></div>
+            <div id="button" onClick="setIP1(16)"><p id="digit2">১৬</p></div>
+            <div id="button" onClick="setIP1(17)"><p id="digit2">১৭</p></div>
+            <div id="button" onClick="setIP1(18)"><p id="digit2">১৮</p></div>
+            <div id="button" onClick="setIP1(19)"><p id="digit2">১৯</p></div>
+            <div id="button" onClick="setIP1(20)"><p id="digit2">২০</p></div>
+            
+            <div id="button" onClick="setIP1(21)"><p id="digit2">২১</p></div>
+            <div id="button" onClick="setIP1(22)"><p id="digit2">২২</p></div>
+            <div id="button" onClick="setIP1(23)"><p id="digit2">২৩</p></div>
+            <div id="button" onClick="setIP1(24)"><p id="digit2">২৪</p></div>
+            <div id="button" onClick="setIP1(25)"><p id="digit2">২৫</p></div>
+            <div id="button" onClick="setIP1(26)"><p id="digit2">২৬</p></div>
+            <div id="button" onClick="setIP1(27)"><p id="digit2">২৭</p></div>
+            <div id="button" onClick="setIP1(28)"><p id="digit2">২৮</p></div>
+            <div id="button" onClick="setIP1(29)"><p id="digit2">২৯</p></div>
+            <div id="button" onClick="setIP1(30)"><p id="digit2">৩০</p></div>
+            
+            <div id="button" onClick="setIP1(31)"><p id="digit2">৩১</p></div>
+            <div id="button" onClick="setIP1(32)"><p id="digit2">৩২</p></div>
+            <div id="button" onClick="setIP1(33)"><p id="digit2">৩৩</p></div>
+            <div id="button" onClick="setIP1(34)"><p id="digit2">৩৪</p></div>
+            <div id="button" onClick="setIP1(35)"><p id="digit2">৩৫</p></div>
+            <div id="button" onClick="setIP1(36)"><p id="digit2">৩৬</p></div>
+            <div id="button" onClick="setIP1(37)"><p id="digit2">৩৭</p></div>
+            <div id="button" onClick="setIP1(38)"><p id="digit2">৩৮</p></div>
+            <div id="button" onClick="setIP1(39)"><p id="digit2">৩৯</p></div>
+            <div id="button" onClick="setIP1(40)"><p id="digit2">৪০</p></div>            
+    </div>
+    
+    <div class="panel" id="panel2" style="opacity:0; margin-left:10px">
+    	<div class="panelcont" id="panelcont2" style="font-size:22px">আরেকটি সংখ্যা বেছে নাও</div>
+        	<div id="button"><p id="digit1">১</p></div>
+        	<div id="button"><p id="digit1">২</p></div>
+        	<div id="button"><p id="digit1">৩</p></div>
+        	<div id="button"><p id="digit1">৪</p></div>
+        	<div id="button"><p id="digit1">৫</p></div>
+        	<div id="button"><p id="digit1">৬</p></div>
+        	<div id="button"><p id="digit1">৭</p></div>
+        	<div id="button"><p id="digit1">৮</p></div>
+        	<div id="button"><p id="digit1">৯</p></div>
+        	<div id="button"><p id="digit2">১০</p></div>
+            
+            <div id="button"><p id="digit2">১১</p></div>
+            <div id="button"><p id="digit2">১২</p></div>
+            <div id="button"><p id="digit2">১৩</p></div>
+            <div id="button"><p id="digit2">১৪</p></div>
+            <div id="button"><p id="digit2">১৫</p></div>
+            <div id="button"><p id="digit2">১৬</p></div>
+            <div id="button"><p id="digit2">১৭</p></div>
+            <div id="button"><p id="digit2">১৮</p></div>
+            <div id="button"><p id="digit2">১৯</p></div>
+            <div id="button"><p id="digit2">২০</p></div>
+            
+            <div id="button"><p id="digit2">২১</p></div>
+            <div id="button"><p id="digit2">২২</p></div>
+            <div id="button"><p id="digit2">২৩</p></div>
+            <div id="button"><p id="digit2">২৪</p></div>
+            <div id="button"><p id="digit2">২৫</p></div>
+            <div id="button"><p id="digit2">২৬</p></div>
+            <div id="button"><p id="digit2">২৭</p></div>
+            <div id="button"><p id="digit2">২৮</p></div>
+            <div id="button"><p id="digit2">২৯</p></div>
+            <div id="button"><p id="digit2">৩০</p></div>
+            
+            <div id="button"><p id="digit2">৩১</p></div>
+            <div id="button"><p id="digit2">৩২</p></div>
+            <div id="button"><p id="digit2">৩৩</p></div>
+            <div id="button"><p id="digit2">৩৪</p></div>
+            <div id="button"><p id="digit2">৩৫</p></div>
+            <div id="button"><p id="digit2">৩৬</p></div>
+            <div id="button"><p id="digit2">৩৭</p></div>
+            <div id="button"><p id="digit2">৩৮</p></div>
+            <div id="button"><p id="digit2">৩৯</p></div>
+            <div id="button"><p id="digit2">৪০</p></div>          
+    </div>
+    
+
+
+<div id="stack1">
+	<div id="ip1"></div>
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+	</div>
+    
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    </div>
+    
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    </div> 
+    
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    </div>
+    
+              
+</div>
+
+
+<div id="stack2">
+    <div id="ip2"></div>
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+	</div>
+    
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    </div>
+    
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    </div> 
+    
+    <div id="container">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-left:45px">
+    	<img src="add_carry_img/rose.gif" id="flower" style="margin-right:45px">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    	<img src="add_carry_img/rose.gif" id="flower">
+    </div>
+    
+              
+</div>
+
+<div id="field">
+
+    <div id="exit">
+            <a href="carry.html">
+                    <img id="again" src="add_carry_img/again.png" />
+            </a>
+    </div>
+
+	<div id="prompt"> 
+        <div id="position"></div> 
+        <div class="addition" id="addition1"></div>
+        
+        <div class="addition" id="explain">
+            <div id="num1" style="float:left">১৯ </div>
+            <div style="float:left; margin-left:10px"> = ১ দশ </div>
+            <div id="num2" style="float:left; margin-left:10px"> ৯</div>        
+        </div>  
+                   
+   	</div>
+    
+    <div id="math">
+    
+        <div id="blank" style="width:0px"></div>
+        <div id="left" style="float:left; width:100px; height:50px; font-size:30px; padding-left:45px; color:#039"></div>
+        <div id="right" style="float:left; width:60px; height:50px; font-size:30px; color:#9B5F0D"></div>
+        
+        <div id="blank" ></div>
+        <div class="digit" id="dig1" style=" color:#039"></div>
+        <div class="digit" id="dig2" style="width:50px;  padding-left:25px; color:#9B5F0D"></div>
+        
+        <div id="sign">+</div>
+        <div class="digit" id="dig3" style=" color:#039"></div>
+        <div class="digit" id="dig4" style="width:50px;  padding-left:25px; color:#9B5F0D"></div>
+        
+        <div id="bar"></div>
+        
+        <div class="digit" id="dig5" style=" color:#039"></div>
+        <div class="digit" id="dig6" style=" color:#039"></div>
+        <div class="digit" id="dig7" style=" color:#9B5F0D"></div>
+    </div>
+    
+    <img id="stand">
+    <img id="car">
+    <img id="crane">
+    <img id="carry">
+</div>
+<script src="add_carry.js">
+</script>
+
+</body>
+</html>
