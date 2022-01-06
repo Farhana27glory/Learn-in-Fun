@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>খেলতে খেলতে শিখি</title>
+<style type="text/css">
+body
+{
+	background-image:url(odd_even_img/background1.png);
+	background-repeat:no-repeat;
+	font-family:SutonnyMJ;
+	font:SutonnyMJ;	
+}
+
+#banner
+{
+	background-image:url(odd_even_img/banner.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	height:74px;
+	width:280px;
+	position:absolute;
+	top:5px;
+	left:500px;
+}
+#panel
+{
+	background-image:url(odd_even_img/panel1_bg.png);
+	position:absolute;
+	left:1080px;
+	top:90px;
+	height:520px;
+	width:225px;
+	padding:10px;
+	margin-bottom:100px;
+	-moz-border-radius:6px;  /* for Firefox */
+	-webkit-border-radius:6px; /* for Webkit-Browsers */
+	border-radius:6px;
+}
+
+#button
+{
+	background:url(odd_even_img/brown.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	height:70px;
+	width:70px;
+	float:left;
+	margin:2px;
+	font-size:90px;
+}
+
+#digit1
+{
+	font-size:45px;
+	color:#600;
+	float:left;
+	position:relative;
+	top:0px;
+	left:0px;
+	margin-left:20px;
+	margin-top:10px;
+}
+#digit2
+{
+	font-size:45px;
+	color:#600;
+	float:left;
+	position:relative;
+	top:0px;
+	left:0px;
+	margin-left:7px;
+	margin-top:10px;
+}
+
+#item_cont
+{
+	height:420px;
+	width:1060px;
+	float:left;
+	position:absolute;
+	top:90px;
+	left:10px;
+}
+.item
+{
+	height:120px;
+	width:240px;
+	background-image:url(odd_even_img/item_bg.png);
+	float:left;
+	margin:5px;
+	border:1;
+	border-color:#900;
+	border-width:2px;
+	border-style:solid;
+	padding:3px;
+	visibility:hidden;
+
+}
+
+#item_obj
+{
+	float:left;
+}
+
+#message
+{
+	position:absolute;
+	top:520px;
+	left:390px;
+	height:50px;
+	width:270px;
+	background-image:url(odd_even_img/msg_bg.png);
+	border:1;
+	border-style:double;
+	border-width:5px;
+	border-color:#8C1789;
+	font-size:50px;
+	color:#B70024;
+	padding:10px;
+	padding-top:15px;
+	-moz-border-radius:6px;  /* for Firefox */
+	-webkit-border-radius:6px; /* for Webkit-Browsers */
+	border-radius:6px;
+	visibility:hidden;	
+}
+
+#again
+{
+	position:absolute;
+	top:530px;
+	left:765px;
+	visibility:hidden;
+}
+#menu
+{
+	position:absolute;
+	top:528px;
+	left:125px;	
+}
+</style>
+
+</head>
+<body>
+	<div id="banner"></div>
+    
+  	<div id="item_cont">
+    	<div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>      
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>  
+    	
+        <div class="item" style="margin-left:270px">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>
+    	
+        <div class="item">
+        	<img id="item_obj">
+        	<img id="item_obj">            
+        </div>     
+    </div>    
+    
+     <div id="panel">
+        <div id="button" onClick="setIP(1)"><p id="digit1">১</p></div>
+        <div id="button" onClick="setIP(2)"><p id="digit1">২</p></div>
+        <div id="button" onClick="setIP(3)"><p id="digit1">৩</p></div>
+        <div id="button" onClick="setIP(4)"><p id="digit1">৪</p></div>    
+        <div id="button" onClick="setIP(5)"><p id="digit1">৫</p></div>
+        <div id="button" onClick="setIP(6)"><p id="digit1">৬</p></div>
+        <div id="button" onClick="setIP(7)"><p id="digit1">৭</p></div>
+        <div id="button" onClick="setIP(8)"><p id="digit1">৮</p></div>
+        <div id="button" onClick="setIP(9)"><p id="digit1">৯</p></div>
+        <div id="button" onClick="setIP(10)"><p id="digit2">১০</p></div>
+        
+        <div id="button" onClick="setIP(11)"><p id="digit2">১১</p></div>        
+        <div id="button" onClick="setIP(12)"><p id="digit2">১২</p></div>
+        <div id="button" onClick="setIP(13)"><p id="digit2">১৩</p></div>
+        <div id="button" onClick="setIP(14)"><p id="digit2">১৪</p></div>    
+        <div id="button" onClick="setIP(15)"><p id="digit2">১৫</p></div>
+        <div id="button" onClick="setIP(16)"><p id="digit2">১৬</p></div>
+        <div id="button" onClick="setIP(17)"><p id="digit2">১৭</p></div>
+        <div id="button" onClick="setIP(18)"><p id="digit2">১৮</p></div>
+        <div id="button" onClick="setIP(19)" style="margin-left:40px;"><p id="digit2">১৯</p></div>
+        <div id="button" onClick="setIP(20)"><p id="digit2">২০</p></div>         
+     </div>   
+ 	 <div id="message"></div> 
+     
+      <img id="again" src="odd_even_img/again.png" />      
+<!--     <a href="odd_even.html">
+     	<img id="again" src="odd_even_img/again.png" />
+     </a>-->
+<!--     <a href="http://www.google.com">
+     	<img id="menu" src="odd_even_img/menu.png"/>
+     </a> -->
+<script src="odd_even_js.js">
+</script>               
+</body>
+</html>
