@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>খেলতে খেলতে শিখি</title>
+<style type="text/css">
+
+#container
+{
+	background-image:url(files/images/menu_img/main_bg_final.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:844px;
+	width:1350px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#number
+{
+	background-image:url(files/images/menu_img/number_bg.png);
+	height:84px;
+	width:270px;
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	top:55px;
+	left:177px;
+	opacity:0;
+}
+
+#number_menu
+{
+	position:absolute;
+	top:12px;
+	left:45px;
+}
+
+#odd_even_menu
+{
+	position:absolute;
+	top:3px;
+	left:14px;
+}
+#odd_even
+{
+	background-image:url(files/images/menu_img/odd_even_bg.png);
+	height:70px;
+	width:280px;
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	top:7px;
+	left:-137px;
+	opacity:0;
+}
+#add
+{
+	background-image:url(files/images/menu_img/add_bg.png);
+	height:84px;
+	width:200px;
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	top:55px;
+	left:177px;
+	opacity:0;
+}
+#add_menu
+{
+	position:absolute;
+	top:10px;
+	left:45px;
+}
+#subtraction_menu
+{
+	position:absolute;
+	top:5px;
+	left:25px;
+}
+#subtraction
+{
+	background-image:url(files/images/menu_img/subtraction_bg.png);
+	height:75px;
+	width:180px;
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	top:59px;
+	left:148px;
+	opacity:0;
+}
+
+#order_menu
+{
+	position:absolute;
+	top:8px;
+	left:25px;
+}
+#order
+{
+	background-image:url(files/images/menu_img/order_bg.png);
+	height:70px;
+	width:160px;
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	top:20px;
+	left:-130px;
+	opacity:0;
+}
+
+#comparison_menu
+{
+	position:absolute;
+	top:8px;
+	left:30px;
+}
+#comparison
+{
+	background-image:url(files/images/menu_img/comparison_bg.png);
+	height:70px;
+	width:160px;
+	background-repeat:no-repeat;
+	background-position:center;
+	position:absolute;
+	top:46px;
+	left:129px;
+	opacity:0;
+}
+#star
+{
+	height:100px; 
+	width:100px; 
+	position:absolute; 
+	visibility:hidden;
+}
+</style>
+
+</head>
+<body>
+    <div id="container">
+        <img id="star" style="left: 241px; top: 237px;">
+    	<img id="star" style="left: 1140px; top: 402px">
+        <img id="star" style="left: 482px; top: 260px">
+        <img id="star" style="left: 571px; top: 376px">
+        <img id="star" style="left: 875px; top: 113px">
+        <img id="star" style="left: 898px; top: 518px">
+    </div>
+    
+    
+    
+<!--menu item : numbers-->
+     <div id="number_div" style="height:400px; width:200px; position:absolute; left: 141px; top: 108px;" onMouseOut="vanish_number()">
+      
+         <div id="number">
+            <a href="files/num1_10.html">
+                <img id="number_menu" src="files/images/menu_img/number_menu.png">
+            </a>
+        </div>    
+    
+	</div> 
+    
+<!--menu item : odd_even-->
+     <div id="odd_even_div" style="height:193px; width:345px; position:absolute; left:850px; top: 70px;" onMouseOut="vanish_odd_even()">
+      
+         <div id="odd_even">
+            <a href="files/odd_even.html">
+                <img id="odd_even_menu" src="files/images/menu_img/odd_even_menu.png">
+            </a>
+        </div>    
+    
+	</div>   
+ 
+ <!--menu item : addition-->
+    <div id="add_div" style="height:150px; width:300px; position:absolute; left: 400px; top: 213px;" onMouseOut="vanish_add()">
+      
+<div id="add">
+            <a href="files/add_menu.html">
+                <img id="add_menu" src="files/images/menu_img/add_menu.png">
+            </a>
+        </div>    
+    
+</div>
+
+    
+<!--menu item : subtraction-->
+     <div id="subtraction_div" style="height:174px; width:350px; position:absolute; left:541px; top: 371px;"  onMouseOut="vanish_subtraction()">
+      
+         <div id="subtraction">
+            <a href="files/subtraction.html">
+                <img id="subtraction_menu" src="files/images/menu_img/subtraction_menu.png">
+            </a>
+        </div>    
+    
+	</div>  
+       
+<!--menu item : order-->
+     <div id="order_div" style="height:174px; width:193px; position:absolute; left:1027px; top: 398px;" onMouseOut="vanish_order()">
+      
+         <div id="order">
+            <a href="files/order.html">
+                <img id="order_menu" src="files/images/menu_img/order_menu.png">
+            </a>
+        </div>    
+    
+	</div> 
+    
+<!--menu item : comparison-->
+     <div id="comparison_div" style="height:187px; width:193px; position:absolute; left:779px; top: 550px;"  onMouseOut="vanish_comparison()">
+      
+         <div id="comparison">
+            <a href="files/comparison.html">
+                <img id="comparison_menu" src="files/images/menu_img/comparison_menu.png">
+            </a>
+        </div>    
+    
+	</div>     
+
+<script src="files/javascript/menu_init.js">
+</script>  
+</body>
+</html>

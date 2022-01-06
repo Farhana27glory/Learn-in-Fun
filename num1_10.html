@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>খেলতে খেলতে শিখি</title>
+<style type="text/css">
+body
+{
+	background-image:url(numbers/num_img/bg.png);
+	background-repeat:no-repeat;	
+	font:SutonnyMJ;
+	font-family:SutonnyMJ;
+	unicode-bidi:bidi-override;
+}
+#banner
+{
+	background:url(numbers/num_img/banner.png);
+	position:absolute;
+	top:15px;
+	left:350px;
+	height:84px;
+	width:500px;
+}
+#item
+{
+	height:160px;
+	width:180px;
+	background-color:#E0FDDF;
+	background-repeat:no-repeat;
+	background-position:center;
+	float:left;
+	margin:5px;
+	border:1;
+	border-color:#008000;
+	border-width:3px;
+	border-style:solid;
+	visibility:hidden;
+	opacity:0;
+}
+#item_cont
+{
+	height:400px;
+	width:1000px;
+	float:left;
+	position:absolute;
+	top:115px;
+	left:10px;
+}
+#panel
+{
+	background-image:url(numbers/num_img/panel1_bg.png);
+	position:absolute;
+	left:1050px;
+	top:120px;
+	height:530px;
+	width:212px;
+	padding:10px;
+	margin-bottom:100px;
+}
+
+#button
+{
+	background:url(numbers/num_img/button_green.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	height:100px;
+	width:100px;
+	float:left;
+	margin:3px;
+	font-size:100px;
+	opacity:0.3;
+}
+#digit1
+{
+	font-size:60px;
+	font-family:SutonnyMJ;
+	color:#000;
+	font:SutonnyMJ;
+	float:left;
+	position:relative;
+	top:0px;
+	left:0px;
+	margin-left:30px;
+	margin-top:15px;
+}
+#message
+{
+	position:absolute;
+	top:500px;
+	left:30px;
+	height:90px;
+	width:400px;
+	background-color:#FF9;
+	border:1;
+	border-style:double;
+	border-width:5px;
+	border-color:#C00;
+	font-size:60px;
+	color:#030;
+	padding-left:100px;
+	padding-top:30px;
+}
+
+#display
+{
+	background:url(numbers/num_img/button_orange.png);
+	background-color:#000;
+	background-position:center;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:480px;
+	left:600px;	
+	height:180px;
+	width:180px;
+	float:left;
+	font-size:80px;
+	color:#900;
+	-moz-border-radius:5px;  /* for Firefox */
+	-webkit-border-radius:5px; /* for Webkit-Browsers */
+	border-radius:5px;	
+}
+#exit{
+	position:absolute;
+	top:700px;
+	left:1050px;
+	height:50px;
+	width:300px;
+/*	opacity:0;*/
+}
+#menu{
+	position:absolute;
+	top:0px;
+	left:0px;
+	float:left
+	
+}
+#next{
+	position:absolute;
+	top:0px;
+	left:140px;
+	float:left;
+}
+</style>
+
+</head>
+<body>
+	<div id="banner"></div>
+    <div id="item_cont">
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+        <div id="item"></div>
+    </div> 
+    
+     <div id="panel">
+        <div id="button" onClick="setIP(1)"><p id="digit1">১</p></div>
+        <div id="button"><p id="digit1">২</p></div>
+        <div id="button"><p id="digit1">৩</p></div>
+        <div id="button"><p id="digit1">৪</p></div>    
+        <div id="button"><p id="digit1">৫</p></div>
+        <div id="button"><p id="digit1">৬</p></div>
+        <div id="button"><p id="digit1">৭</p></div>
+        <div id="button"><p id="digit1">৮</p></div>
+        <div id="button"><p id="digit1">৯</p></div>
+        <div id="button"><p id="digit1" style="margin-left:15px">১০</p></div>
+     </div>   
+	<div id="message"></div> 
+    
+    <div id="display">
+    	<p id="digit1" style="color:#900; font-size:150px; margin-left:10px"></p>
+    </div>
+    
+    <div id="exit">
+            <a href="num11_30.html">
+                    <img id="next" src="numbers/num_img/next_page.png"/>
+            </a> 
+            <a href="menu_c1.html">
+                    <img id="menu" src="numbers/num_img/menu.png" />
+            </a> 
+     </div>
+
+<script src="numbers/num1.js">
+</script>        
+</body>
+</html>

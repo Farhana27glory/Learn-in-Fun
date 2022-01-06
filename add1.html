@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>খেলতে খেলতে শিখি</title>
+<style type="text/css">
+
+
+#flower
+{
+	position:relative; 
+	height:28px; 
+	width:30px;		
+}
+#container
+{
+	background-image:url(addition/add/_images/bg.jpg); 
+	background-repeat:repeat-x; 
+	height:700px; 
+	width:1400px; 
+	position:relative;
+	top:-7px; 
+	left:0px; 
+	padding-top:7px;	
+}
+#sign
+{
+	position:relative;
+	left:250px;
+	top:-25px;
+	border:1;
+	border-color:#360;
+	border-style:double;
+	border-width:8px;
+	height:85px;
+	width:85px;
+	background-color:#FCF;
+	background-position:center;
+	background-repeat:no-repeat;
+	float:left;
+}
+#number1
+{
+	 border:1; 
+	 border-color:#66C; 
+	 border-width:5px; 
+	 border-style:solid;
+	 float:left;
+	 position:relative; 
+	 top:0px; 
+	 left:150px; 
+	 height:60px; 
+	 width:50px;
+	 padding-left:5px;
+	 background-color:#FFC;	
+}
+
+#number2
+{
+	 border:1; 
+	 border-color:#66C; 
+	 border-width:5px; 
+	 border-style:solid;
+	 float:left;
+	 position:relative; 
+	 top:0px; 
+	 left:480px; 
+	 height:60px; 
+	 width:50px;
+	 padding-left:5px; 
+	 background-color:#FFC;		
+}
+
+#number
+{
+	position:relative; 
+	top:0px; 
+	left:10px; 
+	height:60px; 
+	width:50px; 
+	float:left;
+	
+}
+</style>
+
+</head>
+<body marginwidth="0px" topmargin="0px" background="addition/add/_images/bg_add.png">
+<div id="container"> 
+	<img src="addition/add/_images/birds.gif" style="position:absolute; top:25px; left:700px;">
+    <div id="tree1" style=" position:relative; height:480px; width:400px; float:left; background:none">
+    	<img src="addition/add/_images/tree1.png">
+        <div id="flower" style="top:-220px; left:70px;"><img></div>
+        <div id="flower" style="top:-335px; left:245px;"><img></div>
+        <div id="flower" style="top:-380px; left:94px;"><img></div>
+        <div id="flower" style="top:-485px; left:185px;"><img></div>
+    </div>
+    
+    <div id="tree2" style="position:relative; height:480px; width:400px; float:left;">
+    	<img src="addition/add/_images/tree1.png">
+        <div id="flower" style="top:-220px; left:70px;"><img></div>
+        <div id="flower" style="top:-335px; left:245px;"><img></div>
+        <div id="flower" style="top:-380px; left:94px;"><img></div>
+        <div id="flower" style="top:-485px; left:185px;"><img></div>
+    </div>
+    
+    <div id="result" style="position:relative; height:480px; width:400px; float:left;">
+    	<img src="addition/add/_images/tree1.png">
+        <div id="flower" style="top:-265px; left:95px;;"><img></div>
+        <div id="flower" style="top:-245px; left:245px;"><img></div>
+        <div id="flower" style="top:-245px; left:70px;"><img></div>
+        <div id="flower" style="top:-375px; left:220px;"><img></div>
+        <div id="flower" style="top:-475px; left:100px;"><img></div> 
+        <div id="flower" style="top:-520px; left:220px;"><img></div>  
+        <div id="flower" style="top:-615px; left:170px;"><img></div> 
+        <div id="flower" style="top:-515px; left:295px;"><img></div>            
+    </div>
+    
+    <img onClick="clear();" id="again" src="addition/add/_images/again.png" style="position:relative; top:355px;left:-90px">
+    <div style="height:60px; width:1200px; position:relative; top:0px; float:left; margin-bottom:30px">
+    	<div id="number1"><img></div>
+        <div id="number2"><img></div>
+        
+    	<div id="output" style="position:relative; left:800px; top:15px;float:left;  border:1; border-color:#66C; border-width:4px; border-style:solid; padding-right:10px; background-color:#FACFED">
+            <div id="number"><img></div>
+            <div id="number"><img></div>
+            <div id="number"><img></div>
+            <div id="number" style="padding-right:5px;"><img></div>
+            <div id="number"><img></div>
+        </div>         
+    </div>
+    <div style="height:95px; width:1200px; position:relative; top:0px; left:70px; float:left">
+    	<div id="num1" style="float:left; border:1; border-color:#66C; border-width:4px; border-style:solid; padding-right:7px;background-color:#FACFED;">
+            <div id="number"><img onClick="setValue(1);" src="addition/add/_images/1.png"></div>
+            <div id="number"><img onClick="setValue(2);" src="addition/add/_images/2.png"></div>
+            <div id="number"><img onClick="setValue(3);" src="addition/add/_images/3.png"></div>
+            <div id="number"><img onClick="setValue(4);" src="addition/add/_images/4.png"></div>
+        </div>
+    
+    
+    	<div id="num2" style="position:relative; left:150px; float:left;border:1; border-color:#66C; border-width:4px; border-style:solid; padding-right:10px;background-color:#FACFED;">
+            <div id="number"><img onClick="setVal(1);" src="addition/add/_images/1_.png"></div>
+            <div id="number"><img onClick="setVal(2);" src="addition/add/_images/2_.png"></div>
+            <div id="number"><img onClick="setVal(3);" src="addition/add/_images/3_.png"></div>
+            <div id="number"><img onClick="setVal(4);" src="addition/add/_images/4_.png"></div>
+        </div>
+        
+        <div id="sign" onClick="add();">
+        	<img>	
+        </div>
+        
+       
+        
+    </div>
+</div>
+
+<script src="addition/add/add1.js">
+</script>
+   
+</body>
+</html>
